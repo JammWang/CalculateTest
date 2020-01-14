@@ -103,7 +103,7 @@ public class QuestionFragment extends Fragment {
             public void onClick(View view) {
                 if(builder.toString().equals("")){
                     Toast.makeText(getContext(), R.string.warning_message, Toast.LENGTH_SHORT).show();
-                } else if ((Integer.parseInt(builder.toString().trim()) == myViewModel.getAnswer().getValue())) {
+                } else if ((Integer.parseInt(builder.toString().trim())) == myViewModel.getAnswer().getValue()) {
                     myViewModel.answerCorrect();
                     builder.setLength(0);
                     binding.textView9.setText(getResources().getString(R.string.answer_correct_message));
