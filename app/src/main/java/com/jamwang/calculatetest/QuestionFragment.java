@@ -16,6 +16,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.jamwang.calculatetest.databinding.FragmentQuestionBinding;
 import com.jamwang.calculatetest.databinding.FragmentTitleBinding;
@@ -100,18 +101,20 @@ public class QuestionFragment extends Fragment {
             @SuppressWarnings("ConstantConditions")
             @Override
             public void onClick(View view) {
-                if(Integer.valueOf(builder.toString()).intValue() == myViewModel.getAnswer().getValue()){
+                if(builder.toString().equals("")){
+                    Toast.makeText(getContext(), R.string.warning_message, Toast.LENGTH_SHORT).show();
+                } else if ((Integer.parseInt(builder.toString().trim()) == myViewModel.getAnswer().getValue())) {
                     myViewModel.answerCorrect();
                     builder.setLength(0);
                     binding.textView9.setText(getResources().getString(R.string.answer_correct_message));
                     //builder.append(getString(R.string.answer_correct_message));
-                }else {
+                } else {
                     NavController controller = Navigation.findNavController(view);
-                    if(myViewModel.win_flag){
+                    if (myViewModel.win_flag) {
                         controller.navigate(R.id.action_questionFragment_to_winFragment);
                         myViewModel.win_flag = false;
                         myViewModel.save();
-                    }else {
+                    } else {
                         controller.navigate(R.id.action_questionFragment_to_loseFragment);
                     }
                 }
