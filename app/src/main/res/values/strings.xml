@@ -7,6 +7,7 @@
     <string name="title_image_info" translatable="false">title image</string>
     <string name="title_button_message">Enter</string>
     <string name="high_score_message">High Score:%d</string>
+    <string name="title_button_to_show_code_message">About source code</string>
 
     <!--QuestionFragment part-->
     <string name="button0" translatable="false">0</string>

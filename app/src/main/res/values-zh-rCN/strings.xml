@@ -22,4 +22,5 @@
     <string name="question_nav_message">测试</string>
     <string name="win_nav_message">胜利</string>
     <string name="lose_nav_message">失败</string>
+    <string name="title_button_to_show_code_message">有关源代码</string>
 </resources>
