@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
             });
             AlertDialog dialog = builder.create();
             dialog.show();
+        }else if(controller.getCurrentDestination().getId() == R.id.titleFragment){
+            finish();
         }else {
             controller.navigate(R.id.titleFragment);
         }

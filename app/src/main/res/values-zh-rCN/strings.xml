@@ -18,4 +18,8 @@
     <string name="win_message">你太棒了！</string>
     <string name="lose_message" translatable="false">别灰心!</string>
     <string name="win_score_message">创造新记录:%d</string>
+    <string name="title_nav_message">欢迎</string>
+    <string name="question_nav_message">测试</string>
+    <string name="win_nav_message">胜利</string>
+    <string name="lose_nav_message">失败</string>
 </resources>

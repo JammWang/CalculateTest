@@ -43,4 +43,8 @@
     <string name="dialog_positive_message">OK</string>
     <string name="dialog_negative_message">Cancel</string>
 
+    <string name="title_nav_message">Welcome</string>
+    <string name="question_nav_message">Testing</string>
+    <string name="win_nav_message">Win</string>
+    <string name="lose_nav_message">Lose</string>
 </resources>
